@@ -1,0 +1,92 @@
+/* ---------- Branding Colors ---------- */
+:root {
+    --brand-blue: #0b4f7a;
+    --brand-orange: #f08a24;
+    --brand-grey: #f6f6f6;
+    --brand-dark: #0a1f2f;
+    --brand-light: #ffffff;
+}
+
+/* ---------- Layout ---------- */
+.css-1d391kg {
+    background-color: var(--brand-grey);
+}
+
+.block-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* ---------- Header ---------- */
+header {
+    background: linear-gradient(90deg, var(--brand-blue), var(--brand-orange));
+    color: white;
+    padding: 18px 24px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+header p {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    opacity: 0.9;
+}
+
+/* ---------- Sidebar ---------- */
+.stSidebar {
+    background: var(--brand-dark);
+    color: white;
+}
+
+.stSidebar .css-1d391kg {
+    background: var(--brand-dark);
+}
+
+.stSidebar h2,
+.stSidebar p {
+    color: white;
+}
+
+/* ---------- Buttons ---------- */
+.stButton>button {
+    background-color: var(--brand-orange);
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+
+.stButton>button:hover {
+    background-color: #e67c1f;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card p {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    margin-top: 30px;
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    font-family: "Montserrat", sans-serif;
+}
