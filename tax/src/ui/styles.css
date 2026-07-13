@@ -1,92 +1,296 @@
-/* ---------- Branding Colors ---------- */
+/* TaxForge — modern SaaS-style Streamlit skin */
+
 :root {
-    --brand-blue: #0b4f7a;
-    --brand-orange: #f08a24;
-    --brand-grey: #f6f6f6;
-    --brand-dark: #0a1f2f;
-    --brand-light: #ffffff;
+  --bg: #f3f1ec;
+  --bg-accent: #e7eef2;
+  --surface: #ffffff;
+  --ink: #14212b;
+  --muted: #5c6b76;
+  --brand: #0d5c63;
+  --brand-deep: #084448;
+  --accent: #c45c26;
+  --accent-soft: #f3e0d4;
+  --ok: #1f7a4d;
+  --warn: #9a6b00;
+  --danger: #a33b2b;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(20, 33, 43, 0.06);
+  --font: "DM Sans", "Segoe UI", sans-serif;
+  --display: "Fraunces", Georgia, serif;
 }
 
-/* ---------- Layout ---------- */
-.css-1d391kg {
-    background-color: var(--brand-grey);
+html, body, [class*="css"] {
+  font-family: var(--font);
+  color: var(--ink);
+}
+
+.stApp {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #d9e8ea 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #f0dccb 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg) 0%, #ebe6de 100%);
 }
 
 .block-container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 3rem;
+  max-width: 1100px;
 }
 
-/* ---------- Header ---------- */
-header {
-    background: linear-gradient(90deg, var(--brand-blue), var(--brand-orange));
-    color: white;
-    padding: 18px 24px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+/* Hero */
+.otp-hero {
+  padding: 1.75rem 1.75rem 1.5rem;
+  border-radius: calc(var(--radius) + 4px);
+  background:
+    linear-gradient(135deg, rgba(13, 92, 99, 0.95), rgba(8, 68, 72, 0.92)),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: #f7faf9;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.25rem;
+  animation: otp-fade-up 0.55s ease-out;
 }
 
-header h1 {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
+.otp-eyebrow {
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  opacity: 0.8;
+  font-weight: 600;
 }
 
-header p {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    opacity: 0.9;
+.otp-brand {
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-/* ---------- Sidebar ---------- */
-.stSidebar {
-    background: var(--brand-dark);
-    color: white;
+.otp-tagline {
+  margin: 0.55rem 0 0;
+  max-width: 40rem;
+  opacity: 0.92;
+  font-size: 1.02rem;
 }
 
-.stSidebar .css-1d391kg {
-    background: var(--brand-dark);
+/* Workflow rail */
+.otp-rail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0.65rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(20, 33, 43, 0.06);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
 }
 
-.stSidebar h2,
-.stSidebar p {
-    color: white;
+.otp-rail-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
 }
 
-/* ---------- Buttons ---------- */
-.stButton>button {
-    background-color: var(--brand-orange);
-    color: white;
-    border: none;
-    font-weight: 700;
+.otp-rail-index {
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: #d7dee3;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 
-.stButton>button:hover {
-    background-color: #e67c1f;
+.otp-rail-step.is-done .otp-rail-index {
+  background: #b7d7c8;
+  color: var(--ok);
 }
 
-/* ---------- Cards ---------- */
-.card {
-    background: white;
-    border-radius: 12px;
-    padding: 18px;
-    margin-bottom: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.otp-rail-step.is-current {
+  background: var(--brand);
+  color: white;
 }
 
-.card h3 {
-    margin-top: 0;
-    font-family: "Montserrat", sans-serif;
+.otp-rail-step.is-current .otp-rail-index {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
-.card p {
-    font-family: "Montserrat", sans-serif;
+/* Cards / panels */
+.otp-empty,
+.otp-insight,
+.otp-error {
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.85rem;
+  animation: otp-fade-up 0.4s ease-out;
 }
 
-/* ---------- Footer ---------- */
-.footer {
-    margin-top: 30px;
-    padding: 16px;
-    text-align: center;
-    color: #666;
-    font-family: "Montserrat", sans-serif;
+.otp-empty {
+  background: var(--surface);
+  border: 1px dashed rgba(13, 92, 99, 0.25);
+  box-shadow: var(--shadow);
+}
+
+.otp-empty h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+}
+
+.otp-empty p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.otp-empty-cta {
+  margin-top: 0.65rem !important;
+  color: var(--brand) !important;
+  font-weight: 600;
+}
+
+.otp-insight {
+  background: var(--surface);
+  border-left: 4px solid var(--brand);
+  box-shadow: var(--shadow);
+}
+
+.otp-insight.priority-1 {
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, var(--accent-soft), var(--surface) 28%);
+}
+
+.otp-insight-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.otp-chip {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: #e5eef0;
+  color: var(--brand-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.otp-priority {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.otp-insight h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1.02rem;
+}
+
+.otp-insight p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.otp-error {
+  background: #f8e8e4;
+  color: var(--danger);
+  border: 1px solid #e7c1b8;
+  font-weight: 500;
+}
+
+.otp-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Streamlit chrome */
+section[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, #0b3034 0%, #14212b 100%);
+}
+
+section[data-testid="stSidebar"] * {
+  color: #e8eef0 !important;
+}
+
+section[data-testid="stSidebar"] .stRadio label {
+  padding: 0.25rem 0;
+}
+
+.stButton > button {
+  background: var(--accent) !important;
+  color: white !important;
+  border: none !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  padding: 0.5rem 1rem !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.stButton > button:hover {
+  background: #b34f1f !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(196, 92, 38, 0.25);
+}
+
+.stDownloadButton > button {
+  background: var(--brand) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+div[data-testid="stMetric"] {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(20, 33, 43, 0.04);
+}
+
+div[data-testid="stMetric"] label {
+  color: var(--muted) !important;
+}
+
+/* Motion */
+@keyframes otp-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .otp-rail {
+    border-radius: 16px;
+  }
+
+  .otp-rail-step span:last-child {
+    display: none;
+  }
+
+  .otp-rail-step.is-current span:last-child {
+    display: inline;
+  }
 }

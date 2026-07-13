@@ -1,3 +1,6 @@
 municipality,property_class,year,municipal_rate,education_rate
 Toronto,Residential,2024,0.00611,0.00153
 Toronto,Residential,2023,0.00599,0.00150
+Ottawa,Residential,2024,0.00785,0.00153
+Ottawa,Residential,2023,0.00770,0.00150
+Mississauga,Residential,2024,0.00542,0.00153

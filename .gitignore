@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Environment & secrets
+.env
+.env.local
+*.pem
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Generated outputs (keep folder, ignore PDFs)
+tax/outputs/*.pdf
+!tax/outputs/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Cursor
+.cursor/

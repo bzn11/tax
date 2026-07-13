@@ -1,3 +1,6 @@
 roll_number,tax_year,address,municipality,property_class,cva,phased_in_value
 1936040010123450000,2024,123 Queen St W,Toronto,Residential,950000,925000
 1936040010123450000,2023,123 Queen St W,Toronto,Residential,900000,880000
+1901010010012340000,2024,45 Elgin St,Ottawa,Residential,720000,700000
+1901010010012340000,2023,45 Elgin St,Ottawa,Residential,690000,675000
+2105010010098760000,2024,88 Hurontario St,Mississauga,Residential,1100000,1075000
